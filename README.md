@@ -6,6 +6,344 @@
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Us!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .social-card {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: #333;
+        }
+        .social-card img {
+            width: 50px;
+            height: 50px;
+        }
+        .social-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Connect with Us!</h1>
+        <p>Join our community and stay in touch!</p>
+    </header>
+
+    <main>
+        <section class="social-links">
+            <a href="https://discord.gg/ZmdcTtuc" target="_blank" class="social-card">
+                <img src="discord-logo.png" alt="Discord Logo">
+                <h2>Join our Discord</h2>
+            </a>
+            <a href="https://www.facebook.com/kongkimche" target="_blank" class="social-card">
+                <img src="facebook-logo.png" alt="Facebook Logo">
+                <h2>Message us on Facebook</h2>
+            </a>
+            <a href="https://www.instagram.com/kongkimche" target="_blank" class="social-card">
+                <img src="instagram-logo.png" alt="Instagram Logo">
+                <h2>View our Instagram</h2>
+            </a>
+            <a href="https://wa.me/680822066" target="_blank" class="social-card">
+                <img src="whatsapp-logo.png" alt="WhatsApp Logo">
+                <h2>Message us on WhatsApp</h2>
+            </a>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <p>You will be redirected to the chosen platform!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 KKC BRAND. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modal");
+
+        // Get all social cards
+        var socialCards = document.querySelectorAll(".social-card");
+
+        // Get the <span> element that closes the modal
+        var closeModal = document.getElementById("close-modal");
+
+        // When a social card is clicked, open the modal
+        socialCards.forEach(function(card) {
+            card.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default link action
+                modal.style.display = "block"; // Show the modal
+                var link = this.href; // Store the link
+                // Set a timeout to redirect after a delay
+                setTimeout(function() {
+                    window.open(link, "_blank"); // Open the link in a new tab
+                    modal.style.display = "none"; // Hide the modal
+                }, 2000); // Delay in milliseconds
+            });
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Us!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .social-card {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: #333;
+        }
+        .social-card img {
+            width: 50px;
+            height: 50px;
+        }
+        .social-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Connect with Us!</h1>
+        <p>Join our community and stay in touch!</p>
+    </header>
+
+    <main>
+        <section class="social-links">
+            <a href="https://discord.gg/ZmdcTtuc" target="_blank" class="social-card">
+                <img src="discord-logo.png" alt="Discord Logo">
+                <h2>Join our Discord</h2>
+            </a>
+            <a href="https://www.facebook.com/kongkimche" target="_blank" class="social-card">
+                <img src="facebook-logo.png" alt="Facebook Logo">
+                <h2>Message us on Facebook</h2>
+            </a>
+            <a href="https://www.instagram.com/kongkimche" target="_blank" class="social-card">
+                <img src="instagram-logo.png" alt="Instagram Logo">
+                <h2>View our Instagram</h2>
+            </a>
+            <a href="https://wa.me/680822066" target="_blank" class="social-card">
+                <img src="whatsapp-logo.png" alt="WhatsApp Logo">
+                <h2>Message us on WhatsApp</h2>
+            </a>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <p>You will be redirected to the chosen platform!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 KKC BRAND. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modal");
+
+        // Get all social cards
+        var socialCards = document.querySelectorAll(".social-card");
+
+        // Get the <span> element that closes the modal
+        var closeModal = document.getElementById("close-modal");
+
+        // When a social card is clicked, open the modal
+        socialCards.forEach(function(card) {
+            card.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default link action
+                modal.style.display = "block"; // Show the modal
+                var link = this.href; // Store the link
+                // Set a timeout to redirect after a delay
+                setTimeout(function() {
+                    window.open(link, "_blank"); // Open the link in a new tab
+                    modal.style.display = "none"; // Hide the modal
+                }, 2000); // Delay in milliseconds
+            });
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
 <!---<!DOCTYPE html>
 <html lang="en">
 <head>
